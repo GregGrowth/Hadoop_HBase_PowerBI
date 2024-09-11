@@ -6,4 +6,4 @@ __pycache__/
 mapper0*.py
 reducer0*.py
 .venv/
-.job01*/
+.job0Test/
