@@ -1,0 +1,9 @@
+.idea/
+__pycache__/
+.env
+*.pyc
+.DS_Store
+mapper0*.py
+reducer0*.py
+.venv/
+.job01*/
