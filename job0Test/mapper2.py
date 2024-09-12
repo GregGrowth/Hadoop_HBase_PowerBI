@@ -52,3 +52,59 @@ for row in reader:
 '''
 hadoop jar hadoop-streaming-2.7.2.jar -file mapper.py -mapper "python3 mapper.py" -file reducer.py -reducer "python3 reducer.py" -input input/word.txt -output output01
 '''
+
+#!/usr/bin/env python
+"""mapper.py"""
+
+import csv
+import sys
+from datetime import datetime
+
+# Les informations proviennent de l'entrée standard
+reader = csv.reader(sys.stdin)
+header = next(reader)  # Ignorer l'en-tête
+
+for row in reader:
+    try:
+        # Vérification de la validité de la ligne (25 colonnes)
+        if len(row) != 25:
+            continue
+
+        # Extraction des champs
+        nomcli = row[2]
+        prenomcli = row[3]
+        cpcli = row[4]
+        villecli = row[5]
+        codcde = row[6]
+        datcde = row[7]
+        codobj = row[14]
+        libobj = row[17]
+
+        # Vérification des valeurs nulles critiques
+        if not all([nomcli, prenomcli, cpcli, datcde, codobj, libobj]):
+            continue
+
+        # Validation du format de la date et conversion
+        try:
+            date_obj = datetime.strptime(datcde, '%Y-%m-%d')
+            year = date_obj.year
+        except ValueError:
+            continue
+
+        # Vérification des critères de filtre (entre 2008 et 2012, codes postaux spécifiques)
+        if 2008 <= year <= 2012 and (
+            cpcli.startswith('53') or cpcli.startswith('61') or cpcli.startswith('75') or cpcli.startswith('28')):
+
+            try:
+                qte = int(row[15])
+                points = int(row[20])
+
+                # Sortie des données formatées
+                print('%s;%s;%s;%s;%s;%s;%i;%s;%s;%i' % (
+                    nomcli, prenomcli, cpcli, villecli, codcde, datcde, qte, codobj, libobj, points))
+
+            except ValueError:
+                continue
+
+    except Exception as e:
+        continue  # Ignorer les lignes avec des erreurs
