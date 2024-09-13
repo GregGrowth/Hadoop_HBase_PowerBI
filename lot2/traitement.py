@@ -16,7 +16,7 @@ def est_date_valide(date_str):
 
 
 def extraire_annee(date_str):
-    """Extrait l'annee de la date au format 'YYYY-MM-DD HH:MM:SS'."""
+    """Extrait l annee de la date au format 'YYYY-MM-DD HH:MM:SS'."""
     try:
         return datetime.strptime(date_str, '%Y-%m-%d %H:%M:%S').year
     except ValueError:
@@ -39,7 +39,7 @@ def inserer_csv_dans_hbase(csv_file):
                 # Filtrer les colonnes avec des valeurs NULL
                 ligne_filtree = {k: v for k, v in row.items() if v not in ['NULL', '']}
 
-                # Verifier si la date est valide et ne pas importer l’annee 2004
+                # Verifier si la date est valide et ne pas importer l annee 2004
                 colonne_date = 'datcde'  # Colonne contenant la date
                 valeur_date = ligne_filtree.get(colonne_date)
                 if valeur_date:
@@ -47,7 +47,7 @@ def inserer_csv_dans_hbase(csv_file):
                         print("Ignorer la ligne {} en raison de date invalide : {}".format(index, valeur_date))
                         continue
                     if extraire_annee(valeur_date) == 2004:
-                        print("Ignorer la ligne {} en raison de l’annee 2004".format(index))
+                        print("Ignorer la ligne {} en raison de l annee 2004".format(index))
                         continue
 
                 # Utiliser un compteur pour les clés de ligne
