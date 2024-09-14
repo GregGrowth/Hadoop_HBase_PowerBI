@@ -47,7 +47,6 @@ for line in sys.stdin:
             clients_data[codcli]['objets'][libobj] += qte
         else:
             clients_data[codcli]['objets'][libobj] = qte
-
     else:
         # Sinon, on initialise l'entrée pour ce client
         clients_data[codcli] = {
@@ -66,7 +65,6 @@ sorted_clients = sorted(clients_data.items(), key=lambda x: x[1]['fidelite'], re
 
 # Prendre uniquement les 10 premiers
 top_clients = sorted_clients[:10]
-
 
 # Afficher les 10 clients les plus fidèles avec leurs objets commandés et quantités
 print("Les 10 clients les plus fideles :")
@@ -98,6 +96,16 @@ with PdfPages(output_pdf_file) as pdf:
         plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
         plt.axis('equal')  # Pour avoir un graphe circulaire
         plt.title("Repartition des objets commandes pour " + data['nom'] + " " + data['prenom'])
+
+        colors = plt.get_cmap('tab20').colors[:len(sizes)]
+
+        plt.figure(figsize=(8, 8))  # Ajuster la taille du graphique
+        plt.pie(sizes, labels=labels, autopct='%1.1f%%', colors=colors, startangle=140, labeldistance=1.1)
+        plt.legend(labels, loc="best")  # Ajouter la légende
+
+        # Ajouter un titre avec le nom et la fidélité du client
+        plt.title("Repartition des objets commandes pour {} {} - Fidelité: {}".format(
+            data['nom'], data['prenom'], data['fidelite']))
 
         # Sauvegarder le graphe dans le PDF
         pdf.savefig()

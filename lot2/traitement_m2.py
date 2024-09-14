@@ -67,3 +67,9 @@ def inserer_csv_dans_hbase(csv_file):
 
 # Inserer les donnees CSV dans la table HBase
 inserer_csv_dans_hbase(csv_file)
+
+"""
+./start-hadoop.sh
+./services_hbase_thrift.sh
+python3 hbase_fromagerie.py
+"""

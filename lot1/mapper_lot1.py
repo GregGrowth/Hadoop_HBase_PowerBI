@@ -70,7 +70,3 @@ for row in reader:
     except Exception as e:
         # En cas d'erreur (par exemple format de date invalide), ignorer la ligne
         continue
-
-'''
-hadoop jar hadoop-streaming-2.7.2.jar -file mapper.py -mapper "python3 mapper.py" -file reducer.py -reducer "python3 reducer.py" -input input/word.txt -output output01
-'''
