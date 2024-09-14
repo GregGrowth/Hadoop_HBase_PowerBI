@@ -98,7 +98,9 @@ hdfs dfs -cat output_lot1_exo1/part-00000
 
 1. **Configurer et démarrer HBase** :
     ```bash
+    ./services_hbase_thrift.sh
     start-hbase.sh
+    ./hbase_odbc_rest.sh
     ```
    
 2. **Connexion avec Power BI** :
