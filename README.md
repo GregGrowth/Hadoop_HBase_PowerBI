@@ -55,7 +55,7 @@ Le projet se déroulera entre le **11/09/2024 et le 17/09/2024**.
 
 1. Télécharger ou cloner le projet :
     ```bash
-    git clone "(https://github.com/Lufgt/projetHadoop)"
+    git clone "https://github.com/Lufgt/projetHadoop"
     cd 
     ```
 
