@@ -125,7 +125,8 @@ projet_hadoop/
 │   ├── mapper_lot1.py           # Fichier mapper pour le traitement des données
 │   ├── reducer_lot1.py          # Fichier reducer pour l'agrégation des données
 ├── lot2/
-│   ├── hbase_import.sh          # Script pour importer les données dans HBase
-│   ├── powerbi.odbc             # Configuration ODBC pour Power BI
+│   ├── hbase_fromagerie.sh          # Script pour importer les données dans HBase
+│   ├── dataw_fro03.csv             # Configuration ODBC pour Power BI
 ├── README.md                    # Ce fichier
-├── requirements.txt             # requirements.txt
+├── requirements.txt
+├── Power_BI_Fromagerie.pbix            
