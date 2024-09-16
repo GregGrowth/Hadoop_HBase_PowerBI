@@ -129,4 +129,6 @@ projet_hadoop/
 │   ├── dataw_fro03.csv             # Configuration ODBC pour Power BI
 ├── README.md                    # Ce fichier
 ├── requirements.txt
-├── Power_BI_Fromagerie.pbix            
+├── Power_BI_Fromagerie.pbix
+├── .gitignore
+          
