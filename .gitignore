@@ -6,4 +6,6 @@ __pycache__/
 mapper0*.py
 reducer0*.py
 .venv/
-.job01*/
+.job02/
+data/test_sample_1000.csv
+Processus
