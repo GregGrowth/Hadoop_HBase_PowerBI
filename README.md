@@ -108,7 +108,7 @@ hdfs dfs -cat output_lot1_exo1/part-00000
 ./lance_srv_slaves.sh
 ./bash_hadoop_master.sh
 ./start-hadoop.sh
---------------------------- Démarrage d'HBase et ODBC
+--------------------------- Démarrage d'HBase et ODBC.
 ./services_hbase_thrift.sh
 start-hbase.sh
 ./hbase_odbc_rest.sh
