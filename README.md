@@ -120,15 +120,18 @@ start-hbase.sh
 ```bash
 projet_hadoop/
 │
+├── data/
+│   ├── dataw_fro03.csv                  # Fichier data complet
+│   ├── dataw_fro03_mini_1000.csv        # Fichier de test avec 1000 lignes
 ├── lot1/
 │   ├── lot1.sh                  # Script pour exécuter le job MapReduce
 │   ├── mapper_lot1.py           # Fichier mapper pour le traitement des données
 │   ├── reducer_lot1.py          # Fichier reducer pour l'agrégation des données
 ├── lot2/
-│   ├── hbase_fromagerie.sh          # Script pour importer les données dans HBase
-│   ├── dataw_fro03.csv             # Configuration ODBC pour Power BI
-├── README.md                    # Ce fichier
+│   ├── hbase_fromagerie.sh      # Script pour importer les données dans HBase
+│   ├── dataw_fro03.csv             
+├── README.md                    
 ├── requirements.txt
-├── Power_BI_Fromagerie.pbix
+├── Power_BI_Fromagerie.pbix     # Fichier pbix qui contient le traitement et les dashboard Power BI 
 ├── .gitignore
           
