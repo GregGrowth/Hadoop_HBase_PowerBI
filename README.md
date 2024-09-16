@@ -100,7 +100,7 @@ hdfs dfs -cat output_lot1_exo1/part-00000
 #### Étapes d'installation
 
 1. **Configurer et démarrer HBase** :
-    ```bash
+```bash
 ./start_docker_digi.sh
 ./lance_srv_slaves.sh
 ./bash_hadoop_master.sh
@@ -109,11 +109,11 @@ hdfs dfs -cat output_lot1_exo1/part-00000
 ./services_hbase_thrift.sh
 start-hbase.sh
 ./hbase_odbc_rest.sh
-    ```
+```
    
 2. **Connexion avec Power BI** :
-   - Configurez la connexion ODBC dans Power BI.
-   - Importez les données depuis HBase pour visualiser les clients fidèles et générer des rapports.
+   - Configurez la connexion a HBase avec ODBC.
+   - Importez les données depuis HBase pour visualiser les clients fidèles et générer des rapports avec Power BI.
 
 ### Structure du projet
 
