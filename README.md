@@ -110,7 +110,7 @@ hdfs dfs -cat output_lot1_exo1/part-00000
 start-hbase.sh
 ./hbase_odbc_rest.sh
 ```
-3. **Import des données dans Hbase** :
+2. **Import des données dans Hbase** :
    - Dans le master sur Hadoop, lancer le fichier hbase_fromagerie.py avec la commande "python3 hbase_fromagerie.py"(en ayant au préalable récupéré le fichier data).
    - Vérifiez la présence des données en faisant un scan 'fromagerie' dans le HBase shell.
 
@@ -137,5 +137,5 @@ projet_hadoop/
 ├── README.md                    
 ├── requirements.txt
 ├── Power_BI_Fromagerie.pbix     # Fichier pbix qui contient le traitement et les dashboard Power BI 
-├── .gitignore
+├── .gitignore                   
           
