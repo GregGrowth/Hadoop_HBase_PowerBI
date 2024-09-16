@@ -99,7 +99,7 @@ with PdfPages(output_pdf_file) as pdf:
 
         colors = plt.get_cmap('tab20').colors[:len(sizes)]
 
-        plt.figure(figsize=(8, 8))  # Ajuster la taille du graphique
+        plt.figure(figsize=(8, 8))  # Ajuster lahdfs taille du graphique
         plt.pie(sizes, labels=labels, autopct='%1.1f%%', colors=colors, startangle=140, labeldistance=1.1)
         plt.legend(labels, loc="best")  # Ajouter la légende
 
