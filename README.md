@@ -2,6 +2,9 @@
 
 Ce projet fait partie du **Projet BIG DATA** dans le cadre du **POEC Data Analyst**. Il consiste à utiliser l'écosystème Hadoop pour traiter des volumes massifs de données structurées et non structurées, tout en développant des applications analytiques à l'aide de **MapReduce**, **HBase** et **Power BI**.
 
+## Lien du GitHub
+https://github.com/Lufgt/projetHadoop
+
 ## Objectif du projet
 
 L'objectif du projet est de traiter un fichier de données clients (`dataw_fro03.csv`) en utilisant MapReduce dans Hadoop. Le projet est divisé en deux lots :
